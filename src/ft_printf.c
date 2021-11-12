@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h" 
+#include "../includes/ft_printf.h" 
 
 int	ft_valid_arg(const char *str, int i, va_list argptr)
 {
