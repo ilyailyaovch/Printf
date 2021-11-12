@@ -6,7 +6,7 @@
 /*   By: pleoma <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:22:14 by pleoma            #+#    #+#             */
-/*   Updated: 2021/11/10 15:59:09 by pleoma           ###   ########.fr       */
+/*   Updated: 2021/11/12 18:56:30 by pleoma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_utoa(unsigned int num);
-char	*ft_htoa(unsigned int num, char *base);
+char	*ft_htoa(unsigned long long int num, char *base);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));

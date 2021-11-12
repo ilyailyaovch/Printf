@@ -14,14 +14,15 @@
 
 int	ft_putpointer_l(void *ptr, char *base)
 {
-	unsigned int			len;
-	char					*str;
-	unsigned long long int	n;
+	unsigned int					len;
+	char							*str;
+	unsigned long long int			n;
 
+	if (!ptr)
+		return (ft_putstr_l("(nil)"));
 	n = (unsigned long long int) ptr;
-	len = 0;
 	str = ft_htoa(n, base);
-	len = ft_putstr_l(str);
+	len = ft_putstr_l("0x") + ft_putstr_l(str);
 	free(str);
 	return (len);
 }

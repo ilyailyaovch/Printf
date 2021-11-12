@@ -12,11 +12,13 @@
 
 #include "libft.h"
 
-static int	ft_len(unsigned int n)
+static unsigned int	ft_len(unsigned int n)
 {
 	unsigned int	len;
 
 	len = 0;
+	if (n == 0)
+		return (1);
 	while (n != 0)
 	{
 		n /= 10;
@@ -28,7 +30,7 @@ static int	ft_len(unsigned int n)
 char	*ft_utoa(unsigned int n)
 {
 	char			*str;
-	unsigned int	len;
+	unsigned long	len;
 
 	len = ft_len(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));

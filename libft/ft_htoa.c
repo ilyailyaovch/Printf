@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_len(unsigned int n)
+static int	ft_len(unsigned long long int n)
 {
 	unsigned int	len;
 
@@ -27,7 +27,7 @@ static int	ft_len(unsigned int n)
 	return (len);
 }
 
-char	*ft_htoa(unsigned int num, char *base)
+char	*ft_htoa(unsigned long long int num, char *base)
 {
 	char			*str;
 	unsigned int	len;
@@ -38,7 +38,7 @@ char	*ft_htoa(unsigned int num, char *base)
 		return (NULL);
 	str[len] = '\0';
 	len = len - 1;
-	while (num > 16)
+	while (num >= 16)
 	{
 		str[len] = base[num % 16];
 		num /= 16;

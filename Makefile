@@ -18,8 +18,8 @@ FLAGS = -Wall -Wextra -Werror
 LIB = libft/libft.a
 HEADER = includes/ft_printf.h
 OBJ = $(patsubst %.c,%.o,$(SRC))
-SRC =	src/ft_putchar_l.c			ft_printf.c\
-		src/ft_putstr_l.c			main.c\
+SRC =	src/ft_putchar_l.c			src/ft_printf.c\
+		src/ft_putstr_l.c\
 		src/ft_putnbr_l.c\
 		src/ft_putnbr_unsigned_l.c\
 		src/ft_puthex_l.c\
@@ -38,9 +38,9 @@ $(NAME): $(OBJ) $(HEADER)
 	@ar rcs ${NAME} $?
 	@echo "Creating a $@"
 
-#FOR MY TESTS>
-SRC_NEED = libft/ft_strchr.c libft/ft_itoa.c libft/ft_utoa.c libft/ft_htoa.c
-#ADD EXTRA
+#FOR MY TESTS
+SRC_NEED =	main_check.c\
+			libft/ft_strchr.c libft/ft_itoa.c libft/ft_utoa.c libft/ft_htoa.c
 comp:
 	gcc $(FLAGS) $(SRC) $(SRC_NEED)
 
