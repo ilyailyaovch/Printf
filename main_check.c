@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main_check.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pleoma <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 23:52:27 by pleoma            #+#    #+#             */
-/*   Updated: 2021/11/12 23:52:27 by pleoma           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "includes/ft_printf.h"
 # include <stdio.h>
 
@@ -18,6 +6,15 @@
 #define YELLOW  "\x1b[33m"
 #define BLUE    "\x1b[34m"
 #define RESET   "\x1b[0m"
+
+/*
+#FOR TEST
+#PUT IN MAKEFILE
+SRC_NEED =	main_check.c\
+			libft/ft_strchr.c libft/ft_itoa.c libft/ft_utoa.c libft/ft_htoa.c
+comp:
+	gcc $(FLAGS) $(SRC) $(SRC_NEED)
+*/
 
 int main(void)
 {	
