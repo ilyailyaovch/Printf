@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*	LINUX terminal need this
+	if (!ptr)
+		return (ft_putstr_l("(nil)"));
+*/
+
 #include "../includes/ft_printf.h"
 
 int	ft_putpointer_l(void *ptr, char *base)
@@ -18,8 +23,6 @@ int	ft_putpointer_l(void *ptr, char *base)
 	char							*str;
 	unsigned long long int			n;
 
-	if (!ptr)
-		return (ft_putstr_l("(nil)"));
 	n = (unsigned long long int) ptr;
 	str = ft_htoa(n, base);
 	len = ft_putstr_l("0x") + ft_putstr_l(str);

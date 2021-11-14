@@ -35,15 +35,9 @@ $(NAME): $(OBJ) $(HEADER)
 	@echo "Compiling libft"
 	@make -C libft
 	@cp $(LIB) $(NAME)
-	@ar rcs ${NAME} $?
+	@echo "Copying libft in libftprintf"
+	@ar rcs $(NAME) $?
 	@echo "Creating a $@"
-
-#FOR MY TESTS
-SRC_NEED =	main_check.c\
-			libft/ft_strchr.c libft/ft_itoa.c libft/ft_utoa.c libft/ft_htoa.c
-comp:
-	gcc $(FLAGS) $(SRC) $(SRC_NEED)
-
 
 clean:
 	@rm -f $(OBJ)
